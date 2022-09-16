@@ -1,0 +1,138 @@
+<!-- Seccion de Agregar articulos nuevos -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ETIQUETAS META FIN -->
+    <!-- Library type of fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet" />
+    <!-- Icon of webpage -->
+    <link rel="shortcut icon" href="../Imagenes/logo.ico" />
+    <!-- Library of the page awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- library Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css"
+        integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous" />
+    <!-- Reference of CSS file -->
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <!-- Library of animation and transitions -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Nuevos Articulos</title>
+</head>
+
+<body>
+    <!-- Full responsive header start -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand logo h2" href="../index.html">
+                <h1>La<span>Biblioteca</span></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <div class="mx-auto"></div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inventario</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">Personal</a>
+                        <div class="dropdown-menu">
+                            <!-- Enlace de boton temporal -->
+                            <a class="dropdown-item" href="./Pasword.html">Cerrar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Full responsive header end -->
+    <!-- Container command products and cards start -->
+    <h2>Agregar Nuevo Producto</h2>
+    <!-- form start -->
+    <div class="container-fluid">
+        <div class="row ">
+            <form class="col-md-8 mt-4 mb-4" id="formulario">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNombre">Nombre</label>
+                        <input type="text" class="form-control" id="inputNombre" placeholder="Nombre del producto">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputCantidad">Cantidad</label>
+                        <input type="number" class="form-control" id="inputCantidad" placeholder="Cantidad disponible">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPrecio">Precio</label>
+                    <input type="text" class="form-control" id="inputPrecio"
+                        placeholder="Costo unitario del producto en formato $XX.YY">
+                </div>
+                <select id="inputCategoria" class="form-control">
+                    <option selected>Otros...</option>
+                    <option>Bebidas Calientes</option>
+                    <option>Bebidas Frías</option>
+                    <option>Panadería</option>
+                    <option>Cafetería</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Registrar Producto</button>
+            </form>
+            <!-- <img class="col-md-3 mx-5" src="./Imagenes/Postres.svg" alt="cafe"> -->
+            <div class="col-md-4" id="estadisticas">
+            </div>
+        </div>
+        <div class="container-fluid" id="contenedorProductos"></div>
+    </div>
+    <!-- form ends -->
+    <!-- Container command products end -->
+    <!-- Footer start -->
+    <footer>
+        <p>&copy; LaBiblioteca 2022</p>
+        <p>Desarrollo por DarkMaster1814</p>
+        <div class="redes">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </footer>
+    <!-- Footer end -->
+    <!-- BUTTON coffe -->
+    <!-- Button trigger modal -->
+    <button type="button" class="subir" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <i class="fa-solid fa-coffee"><a href="#"></a></i>
+    </button>
+
+    <!-- button of carshoping ends -->
+    <!-- DEFINITION OF SCRIPT ANIMATION AND TRANSITION -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- LINK JS for BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- Link JS for popover -->
+    <script>
+        var popoverTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="popover"]')
+        );
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl);
+        });
+    </script>
+    <!-- LINK JS -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
